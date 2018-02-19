@@ -34,7 +34,7 @@ public class Solveur {
 		
 		// Pour chaque mot de la requete ...
 		for (Mot mot : requete) {
-			System.out.println("mot: "+ mot.getType());
+			System.out.println(mot);
 			// On regarde pour chaque transition ...
 			for (Transition t : transitions) {
 				// Si la configuration (noeudActuel, motActuel) peut donner une transition

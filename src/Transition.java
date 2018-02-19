@@ -15,19 +15,25 @@ public class Transition {
 	}
 	
 	public Noeud doTransition( Noeud n, Mot mot ) {
-		System.out.println("Transition");
-		Noeud toReturn = null;
+		Noeud toReturn = this.arrive;
 		
-			toReturn = this.arrive;
-			if ( action != null ) {
-				action.doAction();
-			}
+		toReturn.transfereMotsTraitesJusquAPresent( n );
+
+		if ( mot.type == RubriqueNom.type || mot.type == RubriqueValeur.type || mot.type == Verbe.type ) {
+			toReturn.addMot(mot);
+		}
+		
+		if ( action != null ) {
+			action.doAction( toReturn.getMotsTraitesJusquAPresent() );
+			toReturn.clearMots();
+		}
 		
 		return toReturn;
 	}
 
 	public boolean accept(Noeud current, Mot mot) {
-		if ( this.depart == current && mot.getType() == etiquette ) {
+		// Si le noeud actuel est le noeud de départ et que la transition attend bien un mot du type etiquette
+		if ( this.depart == current && mot.getType() == this.etiquette ) {
 			return true;
 		}
 		return false;

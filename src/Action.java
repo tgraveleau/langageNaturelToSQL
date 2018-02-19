@@ -1,10 +1,8 @@
+import java.util.ArrayList;
 
-public class Action {
 
-	public void doAction() {
-		
-		System.out.println("Action done");
-		
-	}
+public abstract class Action {
+
+	public abstract void doAction(ArrayList<Mot> arrayList);
 	
 }
