@@ -1,0 +1,12 @@
+
+\.project
+
+\.classpath
+
+\.settings/
+
+bin/
+
+\.metadata/
+
+lib/
