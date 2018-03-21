@@ -16,6 +16,7 @@ public class Solveur {
 
 	public void solve(Mot[] requete, Transition[] transitions) {
 		Noeud current = null;
+		String fausseRequete = "";
 		
 		// Pour chaque transition...
 		for (Transition t : transitions) {
@@ -34,7 +35,7 @@ public class Solveur {
 		
 		// Pour chaque mot de la requete ...
 		for (Mot mot : requete) {
-			System.out.println(mot);
+			System.out.println("mot: "+ mot.value+ "," +mot.getType());
 			// On regarde pour chaque transition ...
 			for (Transition t : transitions) {
 				// Si la configuration (noeudActuel, motActuel) peut donner une transition
@@ -44,8 +45,26 @@ public class Solveur {
 				} else {
 					;
 				}
+				
+			}
+			switch (mot.type) {
+			case "pronom":
+				fausseRequete+="SELECT * FROM ";					
+				break;
+			case "nomRubrique":
+				fausseRequete+=mot.value;					
+				break;
+			case "verbe":
+				fausseRequete+=" WHERE ville = ";					
+				break;
+			case "opt":
+				fausseRequete+=mot.value+";";
+
+			default:
+				break;
 			}
 		}
+		System.out.println(fausseRequete);
 	}
 	
 	

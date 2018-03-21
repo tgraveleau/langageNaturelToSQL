@@ -10,7 +10,7 @@ public class RUN {
 		
 		// Pronom
 		Pronom quel = new Pronom( "quel" );
-		Pronom qui = new Pronom( "qui" );
+		Pronom qui = new Pronom("qui");
 		
 		// Etudiant
 		String[] val_etudiant = { "nom", "prenom" };
@@ -28,8 +28,22 @@ public class RUN {
 		String[] val_ville= { "Angers", "Paris" };
 		RubriqueNom ville = new RubriqueNom( "ville", val_ville);
 		
+		// Responsable
+		String[] val_resp= { "nom", "prenom" };
+		RubriqueNom reponsable  = new RubriqueNom( "responsable", val_personne );
+		
 		// M1 info
 		RubriqueValeur m1info = new RubriqueValeur( "M1 info", diplome );
+		
+		// Bac +5
+		RubriqueValeur bac5 = new RubriqueValeur( "Bac +5", "diplome" );
+		
+		// CAP
+		RubriqueValeur cap = new RubriqueValeur( "CAP boulangerie", "diplome" );
+		
+		// Bac Pro
+		RubriqueValeur bacpro = new RubriqueValeur( "Bac Pro STG", "diplome" );
+		
 		
 		// Angers
 		RubriqueValeur angers = new RubriqueValeur( "Angers", ville );
