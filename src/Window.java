@@ -111,12 +111,12 @@ public class Window extends JPanel implements ActionListener{
 				// habiter
 				String[] habiter_sujetsPossibles = { "etudiant", "personne", "responsable" };
 				String[] habiter_objetsPossibles = { "Angers", "Maubeuge", "Roubaix", "Pellouailles les Vignes" };
-				Verbe habiter = new Verbe( "habiter", habiter_sujetsPossibles, habiter_objetsPossibles );
+				//Verbe habiter = new Verbe( "habiter", habiter_sujetsPossibles, habiter_objetsPossibles );
 				
 				// preparer
 				String[] preparer_sujetsPossibles = { "etudiant", "personne" };
 				String[] preparer_objetsPossibles = { "M1 Info", "Bac +5", "CAP boulangerie", "Bac Pro STG" };
-				Verbe preparer = new Verbe( "preparer", preparer_sujetsPossibles, preparer_objetsPossibles );
+				//Verbe preparer = new Verbe( "preparer", preparer_sujetsPossibles, preparer_objetsPossibles );
 				
 				// diplome
 				String[] val_diplome = {"M1 Info", "Bac +5", "CAP boulangerie", "Bac Pro STG" };
@@ -133,7 +133,7 @@ public class Window extends JPanel implements ActionListener{
 				Transition tr1 = new Transition( n1, n2, Pronom.type, null);
 				Transition tr2 = new Transition( n2, n3, RubriqueNom.type, null);
 				Transition tr3 = new Transition( n3, n4, Verbe.type, null);
-				Transition tr4 = new Transition( n4, n5, RubriqueNom.type, new Action());
+				//Transition tr4 = new Transition( n4, n5, RubriqueNom.type, new Action());
 				
 				Transition[] transitions = { tr1, tr2, tr3};
 				Mot[] requete = { pronom, personne, verbe, opt };

@@ -36,13 +36,13 @@ public class RUN {
 		RubriqueValeur m1info = new RubriqueValeur( "M1 info", diplome );
 		
 		// Bac +5
-		RubriqueValeur bac5 = new RubriqueValeur( "Bac +5", "diplome" );
+		RubriqueValeur bac5 = new RubriqueValeur( "Bac +5", diplome );
 		
 		// CAP
-		RubriqueValeur cap = new RubriqueValeur( "CAP boulangerie", "diplome" );
+		RubriqueValeur cap = new RubriqueValeur( "CAP boulangerie", diplome );
 		
 		// Bac Pro
-		RubriqueValeur bacpro = new RubriqueValeur( "Bac Pro STG", "diplome" );
+		RubriqueValeur bacpro = new RubriqueValeur( "Bac Pro STG", diplome );
 		
 		
 		// Angers
